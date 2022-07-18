@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FallingFlowers">
+    <output-path>$PROJECT_DIR$/out/artifacts/FallingFlowers</output-path>
+    <root id="archive" name="FallingFlowers.jar">
+      <element id="module-output" name="FallingFlowers" />
+    </root>
+  </artifact>
+</component>
