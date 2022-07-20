@@ -4,6 +4,7 @@ import net.minecraft.client.Minecraft;
 import woodp1anks.fallingflowers.config.configs.ModsConfig;
 import woodp1anks.fallingflowers.config.configs.render.ArrayListConfig;
 import woodp1anks.fallingflowers.config.configs.render.BoxDisplayConfig;
+import woodp1anks.fallingflowers.config.configs.render.TabGuiConfig;
 import woodp1anks.fallingflowers.config.configs.render.ZoomConfig;
 
 import java.io.IOException;
@@ -17,6 +18,7 @@ public class ConfigManager {
         add(new ArrayListConfig());
         add(new ZoomConfig());
         add(new BoxDisplayConfig());
+        add(new TabGuiConfig());
     }};
 
     public List<Config> getConfigs() {

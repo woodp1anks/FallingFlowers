@@ -2,6 +2,7 @@ package woodp1anks.fallingflowers.mod;
 
 import woodp1anks.fallingflowers.mod.mods.movement.SprintMod;
 import woodp1anks.fallingflowers.mod.mods.render.*;
+import woodp1anks.fallingflowers.mod.mods.world.BridgeAssistMod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +32,7 @@ public class ModManager {
         mods.add(new FullBrightMod());
         mods.add(new BoxDisplayMod());
         mods.add(new TabGuiMod());
+        mods.add(new BridgeAssistMod());
     }
 
     public void toggleBoundedModules(int key) {

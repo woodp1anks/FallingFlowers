@@ -17,7 +17,7 @@ public class ZoomMod extends Mod {
     }
 
     @Override
-    public void onKeyPressed(int key) {
+    public void onRender3D() {
         if (!Keyboard.isKeyDown(getToggleKey()) && toggled) {
             toggled = false;
             Minecraft.getMinecraft().gameSettings.fovSetting = normalFov;

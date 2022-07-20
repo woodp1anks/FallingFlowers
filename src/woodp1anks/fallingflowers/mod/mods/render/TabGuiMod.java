@@ -73,6 +73,7 @@ public class TabGuiMod extends Mod {
         }
         if (key == Keyboard.KEY_LEFT) {
             isInModList = false;
+            currentMod = 0;
         }
     }
 
