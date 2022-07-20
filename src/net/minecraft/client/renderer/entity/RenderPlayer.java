@@ -67,7 +67,7 @@ public class RenderPlayer extends RendererLivingEntity<AbstractClientPlayer>
         }
     }
 
-    private void setModelVisibilities(AbstractClientPlayer clientPlayer)
+    public void setModelVisibilities(AbstractClientPlayer clientPlayer)
     {
         ModelPlayer modelplayer = this.getMainModel();
 

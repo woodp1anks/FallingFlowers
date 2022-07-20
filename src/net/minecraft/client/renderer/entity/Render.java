@@ -59,7 +59,7 @@ public abstract class Render<T extends Entity>
         this.renderName(entity, x, y, z);
     }
 
-    protected void renderName(T entity, double x, double y, double z)
+    public void renderName(T entity, double x, double y, double z)
     {
         if (this.canRenderName(entity))
         {

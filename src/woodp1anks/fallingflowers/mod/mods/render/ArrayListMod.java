@@ -5,6 +5,7 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.ScaledResolution;
 import org.lwjgl.input.Keyboard;
 import woodp1anks.fallingflowers.FallingFlowers;
+import woodp1anks.fallingflowers.mod.Category;
 import woodp1anks.fallingflowers.mod.Mod;
 
 import java.awt.*;
@@ -17,12 +18,12 @@ public class ArrayListMod extends Mod {
     private int a;
 
     public ArrayListMod() {
-        super("ArrayList", true);
+        super("ArrayList", "ArrayList","see all mods that is enabled.", Category.Render);
         setKey(Keyboard.KEY_P);
     }
 
     @Override
-    public void onRender() {
+    public void onRender2D() {
         ScaledResolution scaledResolution = new ScaledResolution(Minecraft.getMinecraft());
         int width = scaledResolution.getScaledWidth();
         int height = scaledResolution.getScaledHeight();

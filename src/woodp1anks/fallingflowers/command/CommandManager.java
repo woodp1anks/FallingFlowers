@@ -3,8 +3,7 @@ package woodp1anks.fallingflowers.command;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ChatComponentText;
 import woodp1anks.fallingflowers.FallingFlowers;
-import woodp1anks.fallingflowers.command.commands.HelpCommand;
-import woodp1anks.fallingflowers.command.commands.ToggleCommand;
+import woodp1anks.fallingflowers.command.commands.*;
 
 import java.util.*;
 
@@ -14,6 +13,10 @@ public class CommandManager {
     public void load() {
         commandList.add(new HelpCommand());
         commandList.add(new ToggleCommand());
+        commandList.add(new SetCommand());
+        commandList.add(new BindCommand());
+        commandList.add(new ModListCommand());
+        commandList.add(new ModInfoCommand());
     }
 
     public List<Command> getCommandList() {

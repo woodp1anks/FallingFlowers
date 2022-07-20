@@ -16,7 +16,7 @@ public class HelpCommand extends Command {
     public void run(String[] args) {
         Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(new ChatComponentText("§c§l" + FallingFlowers.NAME + " §7>==========================="));
         for (Command command : FallingFlowers.commandManager.getCommandList()) {
-            Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(new ChatComponentText("§e" + command.getName() + " §a" + Arrays.toString(command.getAliases()) + " §7" + command.getDescription()));
+            Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(new ChatComponentText("§e" + command.getName() + " §a" + Arrays.toString(command.getAliases()) + " §b" + Arrays.toString(command.getArgsName()) + " §7" + command.getDescription()));
         }
         Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(new ChatComponentText("§7==========================================="));
     }

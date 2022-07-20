@@ -1,6 +1,8 @@
 package net.minecraft.scoreboard;
 
 import com.google.common.collect.Maps;
+import net.minecraft.client.Minecraft;
+
 import java.util.Collection;
 import java.util.Map;
 

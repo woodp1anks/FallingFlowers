@@ -177,7 +177,7 @@ public class RenderItemFrame extends Render<EntityItemFrame>
         }
     }
 
-    protected void renderName(EntityItemFrame entity, double x, double y, double z)
+    public void renderName(EntityItemFrame entity, double x, double y, double z)
     {
         if (Minecraft.isGuiEnabled() && entity.getDisplayedItem() != null && entity.getDisplayedItem().hasDisplayName() && this.renderManager.pointedEntity == entity)
         {

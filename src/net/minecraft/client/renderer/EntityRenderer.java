@@ -65,6 +65,8 @@ import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GLContext;
 import org.lwjgl.util.glu.Project;
+import woodp1anks.fallingflowers.FallingFlowers;
+import woodp1anks.fallingflowers.mod.Mod;
 
 public class EntityRenderer implements IResourceManagerReloadListener
 {
@@ -1468,6 +1470,10 @@ public class EntityRenderer implements IResourceManagerReloadListener
         GlStateManager.enableCull();
         GlStateManager.disableBlend();
         GlStateManager.disableFog();
+
+        for (Mod mod : FallingFlowers.modManager.getEnabledMods()) {
+            mod.onRender3D();
+        }
 
         if (entity.posY + (double)entity.getEyeHeight() >= 128.0D)
         {

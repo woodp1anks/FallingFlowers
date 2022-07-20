@@ -3,6 +3,8 @@ package woodp1anks.fallingflowers.config;
 import net.minecraft.client.Minecraft;
 import woodp1anks.fallingflowers.config.configs.ModsConfig;
 import woodp1anks.fallingflowers.config.configs.render.ArrayListConfig;
+import woodp1anks.fallingflowers.config.configs.render.BoxDisplayConfig;
+import woodp1anks.fallingflowers.config.configs.render.ZoomConfig;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -13,6 +15,8 @@ public class ConfigManager {
     private final List<Config> configs = new ArrayList<Config>() {{
         add(new ModsConfig());
         add(new ArrayListConfig());
+        add(new ZoomConfig());
+        add(new BoxDisplayConfig());
     }};
 
     public List<Config> getConfigs() {
@@ -42,9 +46,12 @@ public class ConfigManager {
         for (Config config : getConfigs()) {
             if (!config.getPath().toFile().exists()) {
                 try {
-                    System.out.println(Minecraft.getMinecraft().mcDataDir.getAbsolutePath());
-                    Files.createDirectory(config.getPath().getParent().getParent());
-                    Files.createDirectory(config.getPath().getParent());
+                    if (!config.getPath().getParent().getParent().toFile().exists()) {
+                        Files.createDirectory(config.getPath().getParent().getParent());
+                    }
+                    if (!config.getPath().getParent().toFile().exists()) {
+                        Files.createDirectory(config.getPath().getParent());
+                    }
                     config.getPath().toFile().createNewFile();
                 } catch (IOException e) {
                     throw new RuntimeException(e);

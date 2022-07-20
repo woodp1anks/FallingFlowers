@@ -148,7 +148,7 @@ public class GuiIngame extends Gui
         else
         {
             for (Mod mod : FallingFlowers.modManager.getEnabledMods()) {
-                mod.onRender();
+                mod.onRender2D();
             }
 
             this.renderTooltip(scaledresolution, partialTicks);

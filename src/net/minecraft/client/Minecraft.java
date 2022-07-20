@@ -186,6 +186,7 @@ import org.lwjgl.opengl.PixelFormat;
 import org.lwjgl.util.glu.GLU;
 import woodp1anks.fallingflowers.FallingFlowers;
 import woodp1anks.fallingflowers.gui.MainMenuGui;
+import woodp1anks.fallingflowers.mod.Mod;
 
 public class Minecraft implements IThreadListener, IPlayerUsage
 {
@@ -218,7 +219,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
     public int displayWidth;
     public int displayHeight;
     private boolean field_181541_X = false;
-    private Timer timer = new Timer(20.0F);
+    public Timer timer = new Timer(20.0F);
 
     /** Instance of PlayerUsageSnooper. */
     private PlayerUsageSnooper usageSnooper = new PlayerUsageSnooper("client", this, MinecraftServer.getCurrentTimeMillis());
@@ -1914,6 +1915,10 @@ public class Minecraft implements IThreadListener, IPlayerUsage
                 if (Keyboard.getEventKeyState())
                 {
                     FallingFlowers.modManager.toggleBoundedModules(k);
+
+                    for (Mod mod : FallingFlowers.modManager.getEnabledMods()) {
+                        mod.onKeyPressed(k);
+                    }
 
                     if (k == 62 && this.entityRenderer != null)
                     {

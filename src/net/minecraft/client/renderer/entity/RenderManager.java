@@ -105,13 +105,13 @@ public class RenderManager
 {
     private Map < Class <? extends Entity > , Render <? extends Entity >> entityRenderMap = Maps. < Class <? extends Entity > , Render <? extends Entity >> newHashMap();
     private Map<String, RenderPlayer> skinMap = Maps.<String, RenderPlayer>newHashMap();
-    private RenderPlayer playerRenderer;
+    public RenderPlayer playerRenderer;
 
     /** Renders fonts */
     private FontRenderer textRenderer;
-    private double renderPosX;
-    private double renderPosY;
-    private double renderPosZ;
+    public double renderPosX;
+    public double renderPosY;
+    public double renderPosZ;
     public TextureManager renderEngine;
 
     /** Reference to the World object. */

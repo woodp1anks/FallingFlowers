@@ -1,6 +1,6 @@
 invertYMouse:false
 mouseSensitivity:0.5
-fov:0.425
+fov:0.25
 gamma:100.0
 saturation:0.0
 renderDistance:8

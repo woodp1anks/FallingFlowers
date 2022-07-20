@@ -29,6 +29,8 @@ public class ModManager {
         mods.add(new ArrayListMod());
         mods.add(new ZoomMod());
         mods.add(new FullBrightMod());
+        mods.add(new BoxDisplayMod());
+        mods.add(new TabGuiMod());
     }
 
     public void toggleBoundedModules(int key) {
@@ -55,5 +57,25 @@ public class ModManager {
             }
         }
         return null;
+    }
+
+    public List<Mod> getMods(Category category) {
+        List<Mod> mods1 = new ArrayList<>();
+        for (Mod mod : mods) {
+            if (mod.getCategory() == category) {
+                mods1.add(mod);
+            }
+        }
+        return mods1;
+    }
+
+    public List<Mod> getEnabledMods(Category category) {
+        List<Mod> mods1 = new ArrayList<>();
+        for (Mod mod : mods) {
+            if (mod.getCategory() == category && mod.isEnabled()) {
+                mods1.add(mod);
+            }
+        }
+        return mods1;
     }
 }

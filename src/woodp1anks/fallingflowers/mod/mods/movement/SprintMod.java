@@ -2,11 +2,12 @@ package woodp1anks.fallingflowers.mod.mods.movement;
 
 import net.minecraft.client.Minecraft;
 import org.lwjgl.input.Keyboard;
+import woodp1anks.fallingflowers.mod.Category;
 import woodp1anks.fallingflowers.mod.Mod;
 
 public class SprintMod extends Mod {
     public SprintMod() {
-        super("Sprint", true);
+        super("Sprint", null,"let you always sprint", Category.Movement);
         setKey(Keyboard.KEY_X);
     }
 

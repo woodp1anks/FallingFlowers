@@ -2,6 +2,7 @@ package woodp1anks.fallingflowers.mod.mods.render;
 
 import net.minecraft.client.Minecraft;
 import org.lwjgl.input.Keyboard;
+import woodp1anks.fallingflowers.mod.Category;
 import woodp1anks.fallingflowers.mod.Mod;
 
 public class ZoomMod extends Mod {
@@ -12,11 +13,11 @@ public class ZoomMod extends Mod {
     private float normalFov;
 
     public ZoomMod() {
-        super("Zoom", true);
+        super("Zoom", "Zoom","allows you zoom to see something better.", Category.Render);
     }
 
     @Override
-    public void onRender() {
+    public void onKeyPressed(int key) {
         if (!Keyboard.isKeyDown(getToggleKey()) && toggled) {
             toggled = false;
             Minecraft.getMinecraft().gameSettings.fovSetting = normalFov;
