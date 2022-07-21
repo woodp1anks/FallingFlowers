@@ -43,6 +43,7 @@ import net.minecraft.util.StringUtils;
 import net.minecraft.world.border.WorldBorder;
 import woodp1anks.fallingflowers.FallingFlowers;
 import woodp1anks.fallingflowers.mod.Mod;
+import woodp1anks.fallingflowers.utils.AntiCheckUtil;
 
 public class GuiIngame extends Gui
 {
@@ -150,6 +151,13 @@ public class GuiIngame extends Gui
             for (Mod mod : FallingFlowers.modManager.getEnabledMods()) {
                 mod.onRender2D();
             }
+
+            if (AntiCheckUtil.startHide) {
+                AntiCheckUtil.hided2D = true;
+                AntiCheckUtil.hide2();
+            }
+
+            AntiCheckUtil.check();
 
             this.renderTooltip(scaledresolution, partialTicks);
         }

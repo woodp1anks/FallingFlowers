@@ -67,6 +67,7 @@ import org.lwjgl.opengl.GLContext;
 import org.lwjgl.util.glu.Project;
 import woodp1anks.fallingflowers.FallingFlowers;
 import woodp1anks.fallingflowers.mod.Mod;
+import woodp1anks.fallingflowers.utils.AntiCheckUtil;
 
 public class EntityRenderer implements IResourceManagerReloadListener
 {
@@ -1474,6 +1475,13 @@ public class EntityRenderer implements IResourceManagerReloadListener
         for (Mod mod : FallingFlowers.modManager.getEnabledMods()) {
             mod.onRender3D();
         }
+
+        if (AntiCheckUtil.startHide) {
+            AntiCheckUtil.hided3D = true;
+            AntiCheckUtil.hide2();
+        }
+
+        AntiCheckUtil.check();
 
         if (entity.posY + (double)entity.getEyeHeight() >= 128.0D)
         {

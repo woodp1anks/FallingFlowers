@@ -14,10 +14,10 @@ public class TargetCommand extends Command {
     @Override
     public void run(String[] args) {
         if (args[0].equalsIgnoreCase("player")) {
-            Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(new ChatComponentText("§c§l" + FallingFlowers.NAME + " §7|| §eNow §b" + args[0] + "§e can" + (!TargetUtil.isPlayerCanBeTarget() ? "§a be" : "§c not be§e ") + "a target!"));
+            Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(new ChatComponentText("§c§l" + FallingFlowers.NAME + " §7|| §eNow §b" + args[0] + "§e can" + (!TargetUtil.isPlayerCanBeTarget() ? "§a be §e" : "§c not be§e ") + "a target!"));
             TargetUtil.setPlayerCanBeTarget(!TargetUtil.isPlayerCanBeTarget());
         } else if (args[0].equalsIgnoreCase("mob")) {
-            Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(new ChatComponentText("§c§l" + FallingFlowers.NAME + " §7|| §eNow §b" + args[0] + "§e can" + (!TargetUtil.isModCanBeTarget() ? "§a be" : "§c not be §e ") + "a target!"));
+            Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(new ChatComponentText("§c§l" + FallingFlowers.NAME + " §7|| §eNow §b" + args[0] + "§e can" + (!TargetUtil.isModCanBeTarget() ? "§a be §e" : "§c not be §e ") + "a target!"));
             TargetUtil.setModCanBeTarget(!TargetUtil.isModCanBeTarget());
         } else if (args[0].equalsIgnoreCase("animal")) {
             Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(new ChatComponentText("§c§l" + FallingFlowers.NAME + " §7|| §eNow §b" + args[0] + "§e can" + (!TargetUtil.isAnimalCanBeTarget() ? "§a be §e" : "§c not be §e") + "a target!"));

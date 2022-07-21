@@ -1,5 +1,6 @@
 package woodp1anks.fallingflowers.mod;
 
+import net.minecraft.network.Packet;
 import woodp1anks.fallingflowers.FallingFlowers;
 import woodp1anks.fallingflowers.config.Config;
 
@@ -55,6 +56,10 @@ public class Mod {
     }
 
     public void onKeyPressed(int key) {
+
+    }
+
+    public void onPacket(Packet packet) {
 
     }
 

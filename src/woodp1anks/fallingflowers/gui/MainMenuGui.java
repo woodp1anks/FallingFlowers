@@ -1,5 +1,6 @@
 package woodp1anks.fallingflowers.gui;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.*;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.util.ResourceLocation;
@@ -23,7 +24,7 @@ public class MainMenuGui extends GuiScreen {
 
         FontRenderer font = mc.fontRendererObj;
         mc.getTextureManager().bindTexture(new ResourceLocation("fallingflowers/background.png"));
-        Gui.drawModalRectWithCustomSizedTexture(0,0,0,0,width,height,width,height);
+        Gui.drawModalRectWithCustomSizedTexture(-50 + mouseX / 20,-50 + mouseY / 20,0,0,width + 50  + mouseX / 20,height + 50 + mouseX / 20,width + 100,height + 100);
 
         font.drawStringWithShadow(FallingFlowers.NAME,width / 2 - font.getStringWidth(FallingFlowers.NAME) / 2,height / 4 - font.FONT_HEIGHT / 2, Color.pink.getRGB());
         font.drawStringWithShadow("Minecraft 1.8.8",1,height - (font.FONT_HEIGHT) * 2 - 1,Color.LIGHT_GRAY.getRGB());

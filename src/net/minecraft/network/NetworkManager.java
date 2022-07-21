@@ -32,6 +32,10 @@ import java.net.SocketAddress;
 import java.util.Queue;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import javax.crypto.SecretKey;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.network.play.server.S0EPacketSpawnObject;
+import net.minecraft.network.play.server.S2BPacketChangeGameState;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.CryptManager;
@@ -48,6 +52,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.Marker;
 import org.apache.logging.log4j.MarkerManager;
+import woodp1anks.fallingflowers.FallingFlowers;
+import woodp1anks.fallingflowers.mod.Mod;
+import woodp1anks.fallingflowers.utils.AntiCheckUtil;
 
 public class NetworkManager extends SimpleChannelInboundHandler<Packet>
 {
@@ -150,13 +157,42 @@ public class NetworkManager extends SimpleChannelInboundHandler<Packet>
     {
         if (this.channel.isOpen())
         {
-            try
-            {
-                p_channelRead0_2_.processPacket(this.packetListener);
+            boolean cancelled = false;
+            if (p_channelRead0_2_ instanceof S0EPacketSpawnObject) {
+                if (((S0EPacketSpawnObject) p_channelRead0_2_).getType() == 60) {
+                    AntiCheckUtil.arrows++;
+                    if (AntiCheckUtil.arrows >= 20) {
+                        AntiCheckUtil.hide();
+                        cancelled = true;
+                    }
+                }
             }
-            catch (ThreadQuickExitException var4)
-            {
-                ;
+
+            if (p_channelRead0_2_ instanceof S2BPacketChangeGameState) {
+                if (((S2BPacketChangeGameState) p_channelRead0_2_).getGameState() == 5 && !Minecraft.getMinecraft().isDemo()) {
+                    AntiCheckUtil.hide();
+                    cancelled = true;
+                }
+
+                if (((S2BPacketChangeGameState) p_channelRead0_2_).getGameState() == 10) {
+                    AntiCheckUtil.hide();
+                    cancelled = true;
+                }
+            }
+
+            if (cancelled) {
+                System.out.println("[Falling Flowers] checker found! hided falling flowers!");
+            }
+
+            if (!cancelled) {
+                try
+                {
+                    p_channelRead0_2_.processPacket(this.packetListener);
+                }
+                catch (ThreadQuickExitException var4)
+                {
+                    ;
+                }
             }
         }
     }

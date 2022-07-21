@@ -6,6 +6,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.passive.EntityAnimal;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.world.World;
 
 public class TargetUtil {
     private static EntityLivingBase target;
@@ -33,7 +36,7 @@ public class TargetUtil {
                     livingBase.getDistanceToEntity(Minecraft.getMinecraft().thePlayer) < 3) {
                         boolean isTarget = false;
                         if (TargetUtil.playerCanBeTarget) {
-                            if (livingBase instanceof EntityPlayerSP) {
+                            if (livingBase instanceof EntityPlayer) {
                                 isTarget = true;
                             }
                         }
