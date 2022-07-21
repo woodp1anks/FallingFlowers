@@ -17,6 +17,7 @@ public class CommandManager {
         commandList.add(new BindCommand());
         commandList.add(new ModListCommand());
         commandList.add(new ModInfoCommand());
+        commandList.add(new TargetCommand());
     }
 
     public List<Command> getCommandList() {

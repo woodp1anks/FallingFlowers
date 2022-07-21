@@ -53,6 +53,7 @@ import net.minecraft.world.IInteractionObject;
 import net.minecraft.world.World;
 import woodp1anks.fallingflowers.FallingFlowers;
 import woodp1anks.fallingflowers.mod.Mod;
+import woodp1anks.fallingflowers.utils.TargetUtil;
 
 public class EntityPlayerSP extends AbstractClientPlayer
 {
@@ -173,6 +174,8 @@ public class EntityPlayerSP extends AbstractClientPlayer
         for (Mod mod : FallingFlowers.modManager.getEnabledMods()) {
             mod.onUpdate();
         }
+
+        TargetUtil.update();
 
         if (this.worldObj.isBlockLoaded(new BlockPos(this.posX, 0.0D, this.posZ)))
         {

@@ -14,10 +14,17 @@ public class TargetUtil {
     private static int ticks;
 
     private static boolean playerCanBeTarget;
-    private static boolean animalCanBeTarget;
+    private static boolean animalCanBeTarget = true;
     private static boolean modCanBeTarget;
 
     public static void update() {
+        if (target != null) {
+            EntityLivingBase livingBase = target;
+            if (livingBase.isDead || livingBase.getHealth() <= 0 ||
+                    livingBase.getDistanceToEntity(Minecraft.getMinecraft().thePlayer) > 3) {
+                target = null;
+            }
+        }
         if (ticks > keepTargetLength) {
             for (Entity entity : Minecraft.getMinecraft().theWorld.loadedEntityList) {
                 if (entity instanceof EntityLivingBase) {
@@ -44,6 +51,9 @@ public class TargetUtil {
                         }
 
                         if (isTarget) {
+                            if (target == null) {
+                                target = livingBase;
+                            }
                             if (Minecraft.getMinecraft().thePlayer.getDistanceToEntity(livingBase) < Minecraft.getMinecraft().thePlayer.getDistanceToEntity(TargetUtil.target)) {
                                 TargetUtil.target = livingBase;
                             }
@@ -55,37 +65,37 @@ public class TargetUtil {
         ticks++;
     }
 
-    public EntityLivingBase getTarget() {
+    public static EntityLivingBase getTarget() {
         return target;
     }
 
-    public void setTarget(EntityLivingBase target,int keepTargetLength) {
-        this.target = target;
+    public static void setTarget(EntityLivingBase target,int keepTargetLength) {
+        TargetUtil.target = target;
         TargetUtil.keepTargetLength = keepTargetLength;
         TargetUtil.ticks = 0;
     }
 
-    public boolean isAnimalCanBeTarget() {
+    public static boolean isAnimalCanBeTarget() {
         return animalCanBeTarget;
     }
 
-    public boolean isModCanBeTarget() {
+    public static boolean isModCanBeTarget() {
         return modCanBeTarget;
     }
 
-    public boolean isPlayerCanBeTarget() {
+    public static boolean isPlayerCanBeTarget() {
         return playerCanBeTarget;
     }
 
-    public void setAnimalCanBeTarget(boolean animalCanBeTarget) {
-        this.animalCanBeTarget = animalCanBeTarget;
+    public static void setAnimalCanBeTarget(boolean animalCanBeTarget) {
+        TargetUtil.animalCanBeTarget = animalCanBeTarget;
     }
 
-    public static void setKeepTargetLength(int keepTargetLength) {
-        TargetUtil.keepTargetLength = keepTargetLength;
+    public static void setModCanBeTarget(boolean modCanBeTarget) {
+        TargetUtil.modCanBeTarget = modCanBeTarget;
     }
 
-    public void setModCanBeTarget(boolean modCanBeTarget) {
-        this.modCanBeTarget = modCanBeTarget;
+    public static void setPlayerCanBeTarget(boolean playerCanBeTarget) {
+        TargetUtil.playerCanBeTarget = playerCanBeTarget;
     }
 }

@@ -1,5 +1,7 @@
 package woodp1anks.fallingflowers.mod;
 
+import woodp1anks.fallingflowers.mod.mods.combat.AuraMod;
+import woodp1anks.fallingflowers.mod.mods.misc.AntiBot;
 import woodp1anks.fallingflowers.mod.mods.movement.SprintMod;
 import woodp1anks.fallingflowers.mod.mods.render.*;
 import woodp1anks.fallingflowers.mod.mods.world.BridgeAssistMod;
@@ -33,6 +35,8 @@ public class ModManager {
         mods.add(new BoxDisplayMod());
         mods.add(new TabGuiMod());
         mods.add(new BridgeAssistMod());
+        mods.add(new AuraMod());
+        mods.add(new AntiBot());
     }
 
     public void toggleBoundedModules(int key) {

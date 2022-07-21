@@ -13,8 +13,16 @@ public class ModsConfig extends Config {
     @Override
     public void syncStart() {
         for (Mod mod : FallingFlowers.modManager.getMods()) {
-            mod.setEnabled(Boolean.parseBoolean(get(mod.getName() + "-enabled")));
-            mod.setKey(Integer.parseInt(get(mod.getName() + "-key")));
+            if (get(mod.getName() + "-enabled") == null) {
+                mod.setEnabled(false);
+            } else {
+                mod.setEnabled(Boolean.parseBoolean(get(mod.getName() + "-enabled")));
+            }
+            if (get(mod.getName() + "-key") == null) {
+                mod.setKey(0);
+            } else {
+                mod.setKey(Integer.parseInt(get(mod.getName() + "-key")));
+            }
         }
     }
 

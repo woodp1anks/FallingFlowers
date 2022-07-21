@@ -1,41 +1,29 @@
-[21:18:06] [Client thread/INFO]: Setting user: Player171
-[21:18:06] [Client thread/INFO]: (Session ID is token:0:Player171)
-[21:18:08] [Client thread/INFO]: LWJGL Version: 2.9.4
-[21:18:08] [Client thread/INFO]: Reloading ResourceManager: Default, !      §6Crown§eFault §r[§f16x§r] §8[V2].zip
-[21:18:08] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: %s in %s
-[21:18:09] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[21:18:09] [Thread-6/INFO]: Initializing LWJGL OpenAL
-[21:18:09] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[21:18:09] [Thread-6/INFO]: OpenAL initialized.
-[21:18:09] [Sound Library Loader/INFO]: Sound engine started
-[21:18:11] [Client thread/INFO]: Created: 512x512 textures-atlas
-[21:19:13] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
-[21:19:13] [Server thread/INFO]: Generating keypair
-[21:19:13] [Server thread/INFO]: Preparing start region for level 0
-[21:19:14] [Server thread/INFO]: Changing view distance to 8, from 10
-[21:19:15] [Server thread/INFO]: Player171[local:E:dbab0fbe] logged in with entity id 338 at (258.6432438554259, 73.0, 323.1818552033897)
-[21:19:15] [Server thread/INFO]: Player171 joined the game
-[21:19:15] [Server thread/INFO]: Saving and pausing game...
-[21:19:15] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:19:15] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:19:15] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:19:21] [Client thread/INFO]: [CHAT] §c§lFallingFlowers §7||§a This mod has been toggled!
-[21:20:12] [Server thread/INFO]: Player171 thought they could breath underwater
-[21:20:12] [Client thread/INFO]: [CHAT] Player171 thought they could breath underwater
-[21:53:23] [Server thread/INFO]: Player171 has just earned the achievement [Taking Inventory]
-[21:53:23] [Client thread/INFO]: [CHAT] Player171 has just earned the achievement [Taking Inventory]
-[21:55:18] [Server thread/INFO]: Player171 broke their legs
-[21:55:18] [Client thread/INFO]: [CHAT] Player171 broke their legs
-[21:55:19] [Server thread/INFO]: Saving and pausing game...
-[21:55:19] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:55:19] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:55:19] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:55:21] [Server thread/INFO]: Stopping server
-[21:55:21] [Server thread/INFO]: Saving players
-[21:55:21] [Server thread/INFO]: Saving worlds
-[21:55:21] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:55:21] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:55:21] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:55:22] [Client thread/INFO]: Stopping!
-[21:55:22] [Client thread/INFO]: SoundSystem shutting down...
-[21:55:22] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[11:40:23] [Client thread/INFO]: Setting user: Player78
+[11:40:23] [Client thread/INFO]: (Session ID is token:0:Player78)
+[11:40:26] [Client thread/INFO]: LWJGL Version: 2.9.4
+[11:40:26] [Client thread/INFO]: Reloading ResourceManager: Default, !      §6Crown§eFault §r[§f16x§r] §8[V2].zip
+[11:40:26] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: %s in %s
+[11:40:26] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[11:40:27] [Thread-6/INFO]: Initializing LWJGL OpenAL
+[11:40:27] [Thread-6/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[11:40:27] [Thread-6/INFO]: OpenAL initialized.
+[11:40:27] [Sound Library Loader/INFO]: Sound engine started
+[11:40:29] [Client thread/INFO]: Created: 512x512 textures-atlas
+[11:54:58] [Server thread/INFO]: Starting integrated minecraft server version 1.8.8
+[11:54:58] [Server thread/INFO]: Generating keypair
+[11:54:58] [Server thread/INFO]: Preparing start region for level 0
+[11:54:59] [Server thread/INFO]: Changing view distance to 8, from 10
+[11:55:00] [Server thread/INFO]: Player78[local:E:ab42a6e7] logged in with entity id 303 at (8.707208002017566, 101.0, 263.2173295923783)
+[11:55:00] [Server thread/INFO]: Player78 joined the game
+[11:55:00] [Server thread/INFO]: Saving and pausing game...
+[11:55:00] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:55:00] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:55:00] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[11:55:05] [Server thread/INFO]: <Player78> e
+[11:55:05] [Client thread/INFO]: [CHAT] <Player78> e
+[11:55:07] [Server thread/INFO]: <Player78> a
+[11:55:07] [Client thread/INFO]: [CHAT] <Player78> a
+[11:55:09] [Server thread/INFO]: <Player78> e
+[11:55:09] [Client thread/INFO]: [CHAT] <Player78> e
+[11:55:11] [Server thread/INFO]: <Player78> r
+[11:55:11] [Client thread/INFO]: [CHAT] <Player78> r

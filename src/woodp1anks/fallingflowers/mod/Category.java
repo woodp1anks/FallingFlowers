@@ -1,5 +1,5 @@
 package woodp1anks.fallingflowers.mod;
 
 public enum Category {
-    Movement,Render,World
+    Combat,Movement,Render,World,Misc
 }
