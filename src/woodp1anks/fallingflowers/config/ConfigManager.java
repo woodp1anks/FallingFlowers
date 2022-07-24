@@ -1,11 +1,10 @@
 package woodp1anks.fallingflowers.config;
 
-import net.minecraft.client.Minecraft;
 import woodp1anks.fallingflowers.config.configs.ModsConfig;
 import woodp1anks.fallingflowers.config.configs.TargetConfig;
 import woodp1anks.fallingflowers.config.configs.combat.AuraConfig;
 import woodp1anks.fallingflowers.config.configs.render.ArrayListConfig;
-import woodp1anks.fallingflowers.config.configs.render.BoxDisplayConfig;
+import woodp1anks.fallingflowers.config.configs.render.ESPConfig;
 import woodp1anks.fallingflowers.config.configs.render.TabGuiConfig;
 import woodp1anks.fallingflowers.config.configs.render.ZoomConfig;
 
@@ -19,11 +18,11 @@ public class ConfigManager {
         add(new ModsConfig());
         add(new ArrayListConfig());
         add(new ZoomConfig());
-        add(new BoxDisplayConfig());
         add(new TabGuiConfig());
         add(new AuraConfig());
         add(new TargetConfig());
         add(new TargetConfig());
+        add(new ESPConfig());
     }};
 
     public List<Config> getConfigs() {

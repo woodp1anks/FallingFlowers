@@ -11,10 +11,12 @@ import woodp1anks.fallingflowers.utils.TargetUtil;
 import java.util.Random;
 
 public class AuraMod extends Mod {
-    private int minCps = 1;
-    private int maxCps = 343;
+    private int minCps = 5;
+    private int maxCps = 8;
+    private int speed = 1;
 
     private int ticks;
+    private int rotatedTimes;
 
     public AuraMod() {
         super("Aura", "Aura", "Automatically attack every target in the aura", Category.Combat);
@@ -55,11 +57,19 @@ public class AuraMod extends Mod {
         return minCps;
     }
 
+    public int getSpeed() {
+        return speed;
+    }
+
     public void setMaxCps(int maxCps) {
         this.maxCps = maxCps;
     }
 
     public void setMinCps(int minCps) {
         this.minCps = minCps;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
     }
 }
